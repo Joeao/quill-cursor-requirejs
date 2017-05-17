@@ -1,0 +1,6 @@
+/**
+ * @license RequireJS domReady 2.0.1 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
+ * Available via the MIT or new BSD license.
+ * see: http://github.com/requirejs/domReady for details
+ */
+define(function(){function h(a){var b;for(b=0;b<a.length;b+=1){a[b](f)}}function i(){var a=g;if(e){if(a.length){g=[];h(a)}}}function j(){if(!e){e=true;if(c){clearInterval(c)}i()}}function l(a){if(e){a(f)}else{g.push(a)}return l}"use strict";var a,b,c,d=typeof window!=="undefined"&&window.document,e=!d,f=d?document:null,g=[];if(d){if(document.addEventListener){document.addEventListener("DOMContentLoaded",j,false);window.addEventListener("load",j,false)}else if(window.attachEvent){window.attachEvent("onload",j);b=document.createElement("div");try{a=window.frameElement===null}catch(k){}if(b.doScroll&&a&&window.external){c=setInterval(function(){try{b.doScroll();j()}catch(a){}},30)}}if(document.readyState==="complete"){j()}}l.version="2.0.1";l.load=function(a,b,c,d){if(d.isBuild){c(null)}else{l(c)}};return l})
