@@ -13,11 +13,14 @@ define(
 
     function(domReady, Quill, quillCursors) {
     	domReady(function() {       
-            console.log(Quill, quillCursors);
+            console.log('Initialising Quill instance');
 
-              var quill = new Quill('#editor', {
-                theme: 'snow'
-              });
+            var quill = new Quill('#editor', {
+                theme: 'snow',
+                modules: {
+                    cursors: true
+                }
+            });
     	});
     }
 );
