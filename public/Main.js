@@ -3,7 +3,7 @@ requirejs.config({
     paths: {
         "domReady": "../libs/domReady",
 		"quill": "./libs/quill.min",
-        "quill-cursors": "./libs/quill-cursors/quill-cursors.min"
+        "quill-cursors": "./libs/quill-cursors/quill-cursors"
     },
     shim: {
         "quill-cursors": {
